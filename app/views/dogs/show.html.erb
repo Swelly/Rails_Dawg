@@ -1,0 +1,12 @@
+<h1>Say hello to the new <%= @dog.breed %>, "<%= @dog.name %>"</h1>
+<h3>Born at <%= @dog.created_at %></h3>
+
+<form action = "/dogs/<%= @dog.id %>/delete" method = 'post'>
+  <input type = "hidden" name = "delete">
+  <button> Donate this dog </button>
+</form>
+
+<form action = "/dogs/<%= @dog.id %>/edit" method = "get">
+  <input type = "hidden" name = "edit">
+  <button> Edit this dog </button>
+</form>
